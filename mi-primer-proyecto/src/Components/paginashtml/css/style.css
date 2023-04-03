@@ -1,0 +1,956 @@
+/*/Divs generales/*/
+.firstbody {
+    background: linear-gradient(100deg, #0b000f 0%, #791a98 200%);
+    margin: 0%;
+  }
+  
+  .divgeneral {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 8000px;
+    width: 250px;
+    background-color: rgb(24, 15, 29);
+    text-decoration: none;
+    clear: both;
+    float: left;
+  }
+  
+  /*/Header/*/
+  .div1 {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(224, 156, 73, 0.749);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: right;
+    background: radial-gradient(circle, #93684c, #200a2b);
+    text-decoration: none;
+  }
+  
+  .loginregister {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+  }
+  
+  .img1 {
+    width: 200px;
+    height: 190px;
+  }
+  
+  /*/Detalledeartista/*/
+  .iframe3 {
+    width: 220px;
+  }
+  
+  .par {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .detalleartistas1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 0.5cm;
+  }
+  
+  .detalleartistas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 200px;
+    flex-direction: column;
+    padding-left: 1cm;
+    justify-content: center;
+    padding-right: 1cm;
+  }
+  
+  .img5 {
+    width: 220px;
+    height: 200;
+  }
+  
+  /*/Logo/*/
+  .logo {
+    width: 250px;
+    height: 250px;
+    clear: both;
+    float: left;
+  }
+  
+  /*/Footer/*/
+  .footer {
+    background-color: coral;
+    width: 100%;
+    height: 30px;
+  }
+  
+  .linea {
+    opacity: 20%;
+  }
+  
+  .comandos {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  /*/Buscador/*/
+  .buscador1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    justify-content: right;
+    padding-right: 0.5cm;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-top: 0.2cm;
+  }
+  
+  /*/index/*/
+  .artistas2 {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  .div5 {
+    padding-left: 1cm;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section1 {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .section2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .section14 {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+  }
+  
+  .artistas3 {
+    max-width: 200px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .artistas4 {
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  
+  .nombre {
+    max-width: 200px;
+    color: white;
+    text-align: center;
+  }
+  
+  /*/Playlist/*/
+  
+  .playlist1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1cm;
+    font-size: 25px;
+    color: white;
+    size: 25px;
+    padding-left: 1.2cm;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+  }
+  
+  .textplaylist {
+    color: white;
+    font-size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .iframe1 {
+    width: 300px;
+  }
+  .section7 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    padding-right: 0.5cm;
+    padding-top: 1cm;
+    padding-left: 0.5cm;
+  }
+  .section16 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0.5cm;
+    padding-top: 1cm;
+    padding-left: 0.5cm;
+    border-style: solid;
+    border-width: 0.03cm;
+    border-color: rgba(220, 147, 50, 0.846);
+    justify-content: space-between;
+  }
+  
+  .playlist2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .pl2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 350px;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+  }
+  
+  /*/Canciones/*/
+  .article3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .agregar {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    padding-bottom: 0.8cm;
+    font-weight: bolder;
+  }
+  
+  .img2 {
+    width: 200px;
+    height: 190px;
+  }
+  
+  .list3 {
+    list-style-type: square;
+    color: white;
+    font-size: 18px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .listadetalle2 {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    list-style-type: decimal-leading-zero;
+  }
+  
+  .article3 {
+    padding-left: 1cm;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    border-width: 1.5cm;
+    border: rgba(185, 120, 29, 0.884);
+    border-style: solid;
+    width: 220px;
+    height: 450px;
+  }
+  
+  .section3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1cm;
+    padding-right: 1cm;
+  }
+  
+  /*/Detallecanciones/*/
+  .article4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 1cm;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-width: 1.5cm;
+    border: rgba(214, 147, 23, 0.884);
+    border-style: double;
+    width: 300px;
+    height: 480px;
+    margin-left: 0.3cm;
+    margin-right: 0.6cm;
+  }
+  
+  .iframe5 {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .listadetalle5 {
+    color: rgb(252, 244, 244);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: large;
+    justify-content: center;
+    list-style-type: square;
+  }
+  
+  /*/Genero/*/
+  
+  
+  /*/Detalledegenero/*/
+  
+  .h2detalles {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 200;
+  }
+  .caja1genero {
+    margin-left: 25px;
+  }
+  
+  .weight {
+    font-weight: 300;
+  }
+  .h1detalless {
+    font-size: 30px;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .listadetalle1 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .cajadetalle {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .img4 {
+    width: 200px;
+    height: 190px;
+    box-sizing: border-box;
+  }
+  
+  .parrafodetalle {
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .div3 {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .P5 {
+    color: white;
+  }
+  
+  .article3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .tdivgeneral {
+    font-size: 18px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .divcaja {
+    margin-left: 10px;
+  }
+  
+  .vermas {
+    text-decoration: none;
+  }
+  
+  .extras {
+    color: rgb(255, 253, 253);
+    font-size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+  }
+  
+  .textfooter {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    color: white;
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: flex-end;
+    background: radial-gradient(circle, #93684c, #200a2b);
+  }
+  .h1detalles2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 1cm;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .listadetalle1 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .cajadetalle {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .img4 {
+    width: 200px;
+    height: 190px;
+  }
+  
+  .listadetalle4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .div2 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 100px;
+    width: 100px;
+    justify-content: space-around;
+    background-color: rgb(23, 13, 29);
+    text-decoration: none;
+    clear: both;
+    float: left;
+  }
+  
+  .div3 {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .P5 {
+    color: white;
+  }
+  
+  .article3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .tdivgeneral {
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .h2detalles {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 200;
+  }
+  .caja1genero {
+    margin-left: 25px;
+  }
+  
+  .weight {
+    font-weight: 300;
+  }
+  .divcaja {
+    margin-left: 2px;
+  }
+  
+  .vermas {
+    text-decoration: none;
+  }
+  
+  .extras {
+    color: rgb(255, 253, 253);
+    font-size: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+  }
+  
+  .textfooter {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    color: white;
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    background: radial-gradient(circle, #93684c, #200a2b);
+  }
+  
+  .reproduccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    opacity: 100%;
+  }
+  
+  .listadetalle3 {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    list-style-type: decimal-leading-zero;
+    margin-left: 1cm;
+  }
+  
+  .div9 {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .article5 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .audios {
+    width: 200px;
+  }
+  
+  .register {
+    color: white;
+    font-size: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .div10 {
+    display: flex;
+    justify-content: left;
+    padding-left: 1cm;
+  }
+  
+  .registersection {
+    display: flex;
+    padding-left: 1cm;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 200px;
+  }
+  .textlabels {
+    color: rgb(142, 141, 141);
+    size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .playlists {
+    border-style: solid;
+    border-color: rgb(239, 197, 153);
+    border-width: 0.1cm;
+  }
+  
+  .tituloplaylists {
+    color: white;
+  }
+  
+  .listadetalle {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  /*/Detalle de album/*/
+  
+  .section8 {
+    font-size: 20px;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    display: flex;
+    padding-left: 0.5cm;
+  }
+  
+  .h4detalle {
+    size: 20px;
+    color: white;
+  }
+  
+  .section6 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    padding-right: 0.5cm;
+    padding-top: 1cm;
+    padding-left: 0.5cm;
+  }
+  
+  .section10 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 10px;
+    border-style: solid;
+    border-width: 0.03cm;
+    border-color: rgba(213, 155, 47, 0.886);
+  }
+  
+  .iframe {
+    width: 300px;
+  }
+  
+  .pdetalle {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+  }
+  
+  .ppp {
+    color: white;
+    justify-content: center;
+    font-weight: bolder 80%;
+    text-decoration: none;
+    padding-left: 0.2cm;
+  }
+  
+  .h1detalles {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .listagenero4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 1cm;
+  }
+  
+  /*/Media Query/*/
+  
+  /*/Small devices, tablets /*/
+  @media (max-width: 420px) {
+    /*/Query de index /*/
+    .divgeneral {
+      width: 20%;
+      height: 5500px;
+    }
+    .tdivgeneral {
+      font-size: 8px;
+    }
+  
+    /*/Query de playlist /*/
+    .playlist {
+      font-size: 20px;
+    }
+    .iframe1 {
+      margin-right: 1cm;
+      width: 90%;
+    }
+    .divgeneral {
+      height: 1000px;
+    }
+  
+    /*/Query detalle de genero /*/
+    .footer {
+      justify-content: end;
+    }
+    .firstbody {
+      height: 1000px;
+    }
+    .buscador1 {
+      margin-left: 4cm;
+    }
+  
+    /*/Resultado de busqueda /*/
+    .div1 {
+      width: 65%;
+    }
+    .artistas2 {
+      font-size: 10px;
+    }
+    .buscador1 {
+      margin-right: 0.8cm;
+    }
+    .article3 {
+      width: 100%;
+    }
+    .img2 {
+      width: 180px;
+      height: 120px;
+      padding-right: 0.5cm;
+    }
+    .listadetalle2 {
+      font-size: 15px;
+    }
+    .list3 {
+      font-size: 15px;
+    }
+    .agregar {
+      font-size: 10px;
+      text-align: left;
+    }
+  
+    /*/Query de detalle de disco  /*/
+    .divgeneral {
+      width: 20%;
+    }
+    .tdivgeneral {
+      font-size: 7px;
+    }
+    .div1 {
+      width: 80%;
+    }
+    .loginregister {
+      font-size: 10px;
+      padding-top: 0.4cm;
+    }
+    .h4detalle {
+      font-size: 10px;
+    }
+    .iframe {
+      width: 55%;
+    }
+    .section6 {
+      width: 70%;
+    }
+    .ppp {
+      font-size: 10px;
+    }
+    .buscador1 {
+      width: 40%;
+    }
+    .search {
+      width: 55px;
+      height: 20px;
+    }
+  }
+  
+  /*/Query detalle de artista /*/
+  .div1 {
+    width: 100%;
+  }
+  .img5 {
+    width: 250px;
+    padding-right: 0.8cm;
+  }
+  .iframe3 {
+    width: 250px;
+    padding-right: 0.5cm;
+  }
+  footer {
+    justify-content: flex-end;
+  }
+  .artistas {
+    font-size: 15px;
+  }
+  .artistas {
+    margin-right: 1cm;
+    font-size: 15px;
+  }
+  
+  /*/Query detalle de canciones /*/
+  .iframe5 {
+    width: 220px;
+    height: 250px;
+    justify-content: center;
+  }
+  
+  /*CSS DE JAVA*/
+  .contenedorGenero {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .genero1 {
+    color: white;
+    padding-left: 1cm;
+  }
+  
+  .nombregenero {
+    color: white;
+    margin-left: 1.5cm;
+    font-size: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .fotosgenero {
+    height: 150px;
+    width: 150;
+    margin-left: 3.5cm;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: rgb(213, 12, 119);
+    border-width: 0.1cm;
+  }
+  
+  .ulgenero {
+    list-style-type: none;
+  
+  }
+  
+  .letrasgenero {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  .sectiongenero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: white;
+    padding-left: 1cm;
+    flex-direction: row;
+  }
+  
+  .imagenesartistas {
+    margin-left: 4cm;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: rgb(243, 0, 113);
+    border-width: 0.1cm;
+  }
+  .artistas1 {
+    color: white;
+  }
+  
+  .divartistas {
+    padding-left: 1cm;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+  }
+  
+  .generost {
+    margin-left: 1cm;
+    display: flex;
+  }
+  
+  .artistass {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding-left: 1cm;
+    
+    
+  }
+  
+  .cancionesd{color: white;
+  margin-left: 1cm;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  ; font-size: 25px;}
+  
+  
+  .listacanciones{color: white;}
+  
+  .artistas{color: white; margin-left: 1cm;}
