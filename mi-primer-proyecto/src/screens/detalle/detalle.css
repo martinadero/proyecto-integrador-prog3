@@ -1,0 +1,40 @@
+/*/Detallecanciones/*/
+.article4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 1cm;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-width: 1.5cm;
+    border: rgba(214, 147, 23, 0.884);
+    border-style: double;
+    width: 300px;
+    height: 480px;
+    margin-left: 0.3cm;
+    margin-right: 0.6cm;
+  }
+  
+  .iframe5 {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .listadetalle5 {
+    color: rgb(252, 244, 244);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: large;
+    justify-content: center;
+    list-style-type: square;
+  }
