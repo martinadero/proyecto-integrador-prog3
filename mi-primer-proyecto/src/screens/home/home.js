@@ -6,9 +6,9 @@ class Home extends Component {
         super(props);
         this.state = {
             props: props ,
-            valor:0, 
             canciones: [],
             resultadoDeBusqueda: [],
+            valor: props.value, 
         };
     };
 
