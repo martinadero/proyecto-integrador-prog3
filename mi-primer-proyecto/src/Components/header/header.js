@@ -1,18 +1,23 @@
-<<<<<<< HEAD
-=======
-import React  from "react";
+import React from 'react';
+import './header.css';
 
-function Header(){
-        return(
-            <React.Fragment>
-                <section className="Header">
-                  <h1>Canciones</h1>
-                </section>
-            </React.Fragment>
-        )}
-            
+import {Link, Route, Switch} from 'react-router-dom';
 
-export default Header;
+function Header(props){
 
-/*cambiar class name*/
->>>>>>> 8e0daa7c98f63da2e4921a86dfaa119795899b81
+    return(
+        <nav className='navbar'>
+            <div className='logo-home'>
+                <img className='logo' src='./img/image.png'></img>
+                <Link to='/'>Home</Link>
+            </div>
+            <div className="list-header">
+                <Link to='/home'>Home</Link>
+                <Link to='/vertodas'>Ver todas</Link>
+                <Link to='/favoritos'>Favoritos</Link>
+            </div>
+        </nav>
+    )
+}
+
+export default Header

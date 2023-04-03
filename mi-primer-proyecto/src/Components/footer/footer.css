@@ -1,0 +1,16 @@
+.footer {
+    background-color: coral;
+    width: 100%;
+    height: 30px;
+  }
+  
+  .linea {
+    opacity: 20%;
+  }
+  
+  .comandos {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }

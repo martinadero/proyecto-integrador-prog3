@@ -16,32 +16,7 @@
     float: left;
   }
   
-  /*/Header/*/
-  .div1 {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(224, 156, 73, 0.749);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: right;
-    background: radial-gradient(circle, #93684c, #200a2b);
-    text-decoration: none;
-  }
   
-  .loginregister {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    text-align: right;
-    color: white;
-    font-weight: bold;
-    justify-content: center;
-  }
-  
-  .img1 {
-    width: 200px;
-    height: 190px;
-  }
   
   /*/Detalledeartista/*/
   .iframe3 {
@@ -87,23 +62,7 @@
     float: left;
   }
   
-  /*/Footer/*/
-  .footer {
-    background-color: coral;
-    width: 100%;
-    height: 30px;
-  }
   
-  .linea {
-    opacity: 20%;
-  }
-  
-  .comandos {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
   
   /*/Buscador/*/
   .buscador1 {
