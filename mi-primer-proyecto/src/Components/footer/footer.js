@@ -5,12 +5,14 @@ function Footer(props){
 
     return(
         <footer>
-            <p>Martina Mendez</p>
-            <p className="separador">|</p>
+            <p >Martina Mendez</p>
+            <p className="espacio">|</p>
             <p>Arslan Priscilla</p>
-            <p className="separador">|</p>
+            <p className="espacio">|</p>
             <p>Martina Daireaux</p>
         </footer>
     )
 }
 export default Footer
+
+

@@ -1,16 +1,16 @@
-.footer {
-    background-color: coral;
+
+footer {
+  background-color: coral;
     width: 100%;
     height: 30px;
-  }
-  
-  .linea {
-    opacity: 20%;
-  }
-  
-  .comandos {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+  .espacio{
+      display: none;
   }

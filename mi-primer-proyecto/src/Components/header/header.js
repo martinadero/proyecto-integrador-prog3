@@ -7,11 +7,11 @@ function Header(props){
 
     return(
         <nav className='navbar'>
-            <div className='logo-home'>
+            <div className='homelogo'>
                 <img className='logo' src='./img/image.png'></img>
                 <Link to='/'>Home</Link>
             </div>
-            <div className="list-header">
+            <div className="headerlist">
                 <Link to='/home'>Home</Link>
                 <Link to='/vertodas'>Ver todas</Link>
                 <Link to='/favoritos'>Favoritos</Link>
