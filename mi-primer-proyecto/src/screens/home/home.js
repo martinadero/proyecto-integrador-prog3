@@ -1,36 +1,47 @@
 import React, { Component } from 'react';
-import './style.css';
+import Tarjeta from '../../Components/tarjeta/tarjeta';
+import './home.css';
 
 class Home extends Component {
     constructor(props){
         super(props);
         this.state = {
-            props: props ,
-            canciones: [],
+           peliculas: [],
             resultadoDeBusqueda: [],
-            valor: props.value, 
-        };
+            loader:true
+         };
     }
-
-
-    componentDidMount() {
+componentDidMount() {
         //Buscamos datos
-        fetch('https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}/')
-            .then(res => res.json())
-            .then(data => this.setState({
-                canciones: data.results,
-                loader: false
-            }))
-            .catch(err => console.log(err))
-
-        fetch('https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}/') //CAMBIAR ESTE LINK//
+      fetch('https://api.themoviedb.org/3/movie/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1') //CAMBIAR ESTE LINK//
             .then(response => response.json())
-            .then(data => this.setState({
-                canciones: data.results,
+            .then(data => {
+                console.log(data.results);
+                 this.setState({
+                peliculas: data.results,
                 loader: false
-
-            }))
+             })})
             .catch(error => console.log(error));
+    }
+    filtrar(){
+        console.log('esta funcionando');
+    }
+    render(){
+        console.log(this.state.peliculas);
+        return(
+            <>
+          <h1>Pagina del home</h1>
+           {
+            this.state.peliculas.map((pelicula)=>
+            <Tarjeta 
+            data = {pelicula}
+            key={ pelicula.id} 
+           />
+
+            )
+           }
+         </>
+         )
     }
 
 }
