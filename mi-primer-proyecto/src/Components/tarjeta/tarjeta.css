@@ -1,0 +1,9 @@
+
+.tarjetas{
+    display: flex;
+    
+}
+.imagenes{
+   width: 20%;
+   display: flexbox;
+}

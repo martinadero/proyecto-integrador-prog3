@@ -30,7 +30,7 @@ componentDidMount() {
         console.log(this.state.peliculas);
         return(
             <>
-          <h1>Pagina del home</h1>
+          <h1 className='home' >Pagina del home</h1>
            {
             this.state.peliculas.map((pelicula)=>
             <Tarjeta 
