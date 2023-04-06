@@ -1,12 +1,15 @@
 import React from 'react';
 import Tarjeta from './Components/tarjeta/tarjeta';
 import Home from './screens/home/home';
-import detalle from './screens/detalle/detalle'
-import { Route } from 'react-router-dom';
+import Detalle from './screens/detalle/detalle'
+import Footer from './Components/footer/footer';
+import { Route, Switch,Link} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-    <Home />
+      <Home/>
+   <Footer/>
+   
        </div>
   );
 }

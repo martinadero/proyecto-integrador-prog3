@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tarjeta from '../../Components/tarjeta/tarjeta';
-import './home.css';
+import './home.css'; 
+
 
 class Home extends Component {
     constructor(props){
