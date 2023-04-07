@@ -8,7 +8,7 @@ function Header(props){
     return(
         <nav className='navbar'>
             <div className='homelogo'>
-                <Link to='/'><img className='logo' src='./img/imagen.png' alt='' /></Link>
+                <Link to='/'><img className='logo' src='./img/logo.png' alt='' /></Link>
             </div>
             <div className='search'>
                 <form className='search-form'>
