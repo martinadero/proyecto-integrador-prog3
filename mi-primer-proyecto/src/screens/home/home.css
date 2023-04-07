@@ -1,3 +1,9 @@
-.home{
+.home {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

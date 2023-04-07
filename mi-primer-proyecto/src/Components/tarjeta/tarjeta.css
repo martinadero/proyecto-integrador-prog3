@@ -1,13 +1,16 @@
-
 .tarjetas{
     display: flex;
-    
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 22vw;
+    background-color: black;
+    margin-bottom: 20px;
 }
 .imagenes{
-   width: 20%;
-   display: flexbox;
+    width: 20vw;
+    margin: auto;
 }
 .textotarjeta{
     color: white;
-    background-color: black;
+    text-align: center;
 }
