@@ -1,0 +1,5 @@
+.home-conteiner-peliculas-populares, .home-conteiner-peliculas-en-cartelera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
