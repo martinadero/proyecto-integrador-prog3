@@ -3,6 +3,7 @@ import Tarjeta from "../../Components/tarjeta/tarjeta";
 import Header from "../../Components/header/header";
 import { Link } from "react-router-dom";
 import "./home.css";
+import serieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
 
 class Home extends Component {
   constructor(props) {

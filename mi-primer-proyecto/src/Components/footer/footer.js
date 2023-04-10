@@ -10,7 +10,7 @@ function Footer(){
         <footer>
             <p >Martina Mendez</p>
             <p className="espacio">|</p>
-            <p>Arslan Priscilla</p>
+            <p> Priscilla Arslan</p>
             <p className="espacio">|</p>
             <p>Martina Daireaux</p>
         </footer>

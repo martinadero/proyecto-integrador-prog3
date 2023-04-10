@@ -3,6 +3,7 @@ import Home from "./screens/home/home";
 import Detalle from "./screens/detalle/detalle";
 import VerTodas from "./screens/vertodas/vertodas";
 import Footer from "./Components/footer/footer";
+import serieTarjeta from "./Components/serieTarjeta/serieTarjeta";
 import { Route, BrowserRouter } from "react-router-dom";
 
 function App() {
