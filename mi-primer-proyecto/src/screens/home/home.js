@@ -34,6 +34,7 @@ class Home extends Component {
       fetch("https://api.themoviedb.org/3/tv/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") 
       .then((response) => response.json())
       .then((data) => {
+        
         this.setState({
           series_populares: data.results,
           loader: false,
