@@ -54,6 +54,7 @@ class Home extends Component {
   filtrar() {
     console.log("esta funcionando");
   }
+  
   render() {
     return (
       <>
