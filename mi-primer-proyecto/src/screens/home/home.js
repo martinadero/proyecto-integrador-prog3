@@ -11,6 +11,7 @@ class Home extends Component {
       peliculas_populares: [],
       peliculas_en_cartelera: [],
       resultadoDeBusqueda: [],
+      series_populares:[],
       loader: true,
     };
   }
@@ -22,30 +23,19 @@ class Home extends Component {
         let lista_peliculas_populares = []
         for (let i = 0; i < 4; i++) {
             lista_peliculas_populares.push(data.results[i])
-        }
+        } //No USAR FOR, USAR MAP Y FILTER//
         this.setState({
           peliculas_populares: lista_peliculas_populares,
           loader: false,
         });
       })
       .catch((error) => console.log(error));
-  }
-  filtrar() {
-    console.log("esta funcionando");
-  }
 
-
-  componentDidMount() {
-    //Buscamos datos
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=1845c94396255a256363182ed898e8fc&language=en-US&page=1") 
+      fetch("https://api.themoviedb.org/3/tv/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") 
       .then((response) => response.json())
       .then((data) => {
-        let lista_peliculas_populares = []
-        for (let i = 0; i < 4; i++) {
-            lista_peliculas_populares.push(data.results[i])
-        }
         this.setState({
-          peliculas_populares: lista_peliculas_populares,
+          series_populares: data.results,
           loader: false,
         });
       })
@@ -53,6 +43,10 @@ class Home extends Component {
   }
   filtrar() {
     console.log("esta funcionando");
+  }
+  
+filtrar() {
+  console.log("esta funcionando");
   }
  render() {
     return (
@@ -74,7 +68,7 @@ class Home extends Component {
                 <Link to="/ver-mas/cartelera" style={{ textDecoration: 'none' }}><p>Ver todas</p></Link>
             </div>
             <div className="home-conteiner-peliculas-en-cartelera">
-                {this.state.peliculas_en_cartelera.map((pelicula) => (
+                {this.state.series_populares.map((pelicula) => (
                     <Tarjeta data={pelicula} key={pelicula.id} />
                 ))}
             </div>
@@ -83,10 +77,6 @@ class Home extends Component {
     );
   }
 }
-
-
-
-
 
 
 
