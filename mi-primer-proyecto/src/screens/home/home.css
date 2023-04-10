@@ -1,9 +1,7 @@
 .home {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.home-conteiner {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-around;
+    
 }
