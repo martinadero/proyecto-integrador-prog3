@@ -15,4 +15,6 @@ class Favoritos extends Component {
 };
 //AGREGAR RENDER//
 
+
+
 export default Favoritos;
