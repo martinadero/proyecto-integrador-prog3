@@ -16,44 +16,48 @@ class Home extends Component {
   }
   componentDidMount() {
     //Buscamos datos
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") //CAMBIAR ESTE LINK//
+    fetch("https://api.themoviedb.org/3/movie/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") 
       .then((response) => response.json())
       .then((data) => {
-
         let lista_peliculas_populares = []
-
         for (let i = 0; i < 4; i++) {
             lista_peliculas_populares.push(data.results[i])
         }
-
         this.setState({
           peliculas_populares: lista_peliculas_populares,
           loader: false,
         });
       })
       .catch((error) => console.log(error));
-
-    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1")
-      .then((response) => response.json())
-      .then((data) => {
-
-        let lista_peliculas_en_cartelera = []
-
-        for (let i = 0; i < 4; i++) {
-            lista_peliculas_en_cartelera.push(data.results[i])
-        }
-
-        this.setState({
-          peliculas_en_cartelera: lista_peliculas_en_cartelera,
-          loader: false,
-        });
-      })
-      .catch((error) => console.log(error));
-
   }
   filtrar() {
     console.log("esta funcionando");
   }
+
+
+  componentDidMount() {
+    //Buscamos datos
+    fetch("https://api.themoviedb.org/3/movie/popular?api_key=1845c94396255a256363182ed898e8fc&language=en-US&page=1") 
+      .then((response) => response.json())
+      .then((data) => {
+        let lista_peliculas_populares = []
+        for (let i = 0; i < 4; i++) {
+            lista_peliculas_populares.push(data.results[i])
+        }
+        this.setState({
+          peliculas_populares: lista_peliculas_populares,
+          loader: false,
+        });
+      })
+      .catch((error) => console.log(error));
+  }
+  filtrar() {
+    console.log("esta funcionando");
+  }
+
+
+
+
   render() {
     return (
       <>
