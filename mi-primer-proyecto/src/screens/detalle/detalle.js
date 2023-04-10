@@ -4,8 +4,10 @@ class Detalle extends Component{
     constructor(props){
         super(props);
         this.state = {
-            pelicula: {},
+            props : props,
             loader: true
+          
+
         }
     }
 
@@ -23,16 +25,8 @@ class Detalle extends Component{
             objeto_pelicula.release_date = data.release_date
             objeto_pelicula.overview = data.overview
             objeto_pelicula.poster_path = `https://image.tmdb.org/t/p/original/${data.poster_path}`
-            let lista_generos = []
-            for (let i = 0; i < data.genres.length; i++) {
-                lista_generos.push(data.genres[i])
-            }
-            objeto_pelicula.genres = lista_generos
-            this.setState({
-                pelicula: objeto_pelicula,
-                loader: false
-            })
-            console.log(this.state.pelicula);
+            
+             console.log(this.state.pelicula);
         })
         .catch(error => console.log(error));
     }
@@ -44,11 +38,7 @@ class Detalle extends Component{
                 <h1>{this.state.pelicula.vote_average}</h1>
                 <h1>{this.state.pelicula.release_date}</h1>
                 <h1>{this.state.pelicula.overview}</h1>
-                <ul>
-                    {
-                        this.state.pelicula.genres.map( genero => <li>{genero}</li>)
-                    }
-                </ul>
+               
             </div>
         )
     }
