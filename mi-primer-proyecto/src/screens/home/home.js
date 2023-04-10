@@ -84,4 +84,42 @@ class Home extends Component {
   }
 }
 
+buscadorP(evento){
+  evento.preventDefault();
+  if (this.state.valor === '') {
+      this.setState({
+          mensaje: 'No has escrito nada'
+      })
+  } else {
+      fetch(`https://api.themoviedb.org/3/search/movie?query=${this.state.valor}&api_key=1845c94396255a256363182ed898e8fc&language=en-US`)
+          .then(response => response.json())
+          .then(data => {
+              this.setState({
+                  resultadosDeBusqueda: data.results
+              });
+              if (data.results.length === 0) {
+                  this.setState({
+                      mensaje: 'No se enontraron resultados'
+                  })
+
+              }
+
+          })
+          .catch(error => console.log(error))
+
+  }
+}
+
+controlarCambios(evento) {
+  this.setState(
+      {
+          valor: evento.target.value,
+          mensaje: '',
+          resultadosDeBusqueda: []
+      },
+      () => console.log(evento.target.value));
+}
+
+
+
 export default Home;
