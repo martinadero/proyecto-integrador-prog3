@@ -55,7 +55,7 @@ filtrar() {
         <h1 className="home">Pagina del home</h1>
         <div className="home-conteiner">
             <div className="home-conteiner-title">
-                <h2>Peliculas Populares</h2>
+                <h2>Peliculas </h2>
                 <Link to="/ver-mas/populares" style={{ textDecoration: 'none' }}><p>Ver todas</p></Link>
             </div>
             <div className="home-conteiner-peliculas-populares">
@@ -64,7 +64,7 @@ filtrar() {
                 ))}
             </div>
             <div className="home-conteiner-title">
-                <h2>Peliculas en Cartelera</h2>
+                <h2>Series</h2>
                 <Link to="/ver-mas/cartelera" style={{ textDecoration: 'none' }}><p>Ver todas</p></Link>
             </div>
             <div className="home-conteiner-peliculas-en-cartelera">

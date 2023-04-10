@@ -7,6 +7,7 @@ class serieTarjeta extends Component {
         this.state = {};
     }
     render(){
+        
     
     }
 }
