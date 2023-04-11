@@ -10,7 +10,7 @@ class Tarjeta extends Component {
     render() {
         console.log(this.props);
         return (
-            < Link to={`/detallePelicula/id/${this.props.data.id}`} >
+            < Link className='t1' to={`/detallePelicula/id/${this.props.data.id}`} >
                 <div className='tarjetas'>
                     <h3 className='textotarjeta'>{this.props.data.title}</h3>
                     <h3 className='textotarjeta'>{this.props.data.vote_average}</h3>

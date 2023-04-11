@@ -57,7 +57,7 @@ filtrar() {
         <h1 className="home">PAGINA HOME</h1>
         <div className="home-conteiner">
             <div className="home-conteiner-title">
-                <h2 className="home-conteiner-title"> PELICULAS </h2>
+                <h2 className="pe"> PELICULAS </h2>
                 <Link to="/ver-mas/populares" style={{ textDecoration: 'none' }}><p className="ver">VER TODAS</p></Link>
             </div>
             <div className="home-conteiner-peliculas-populares">
@@ -66,8 +66,8 @@ filtrar() {
                 ))}
             </div>
             <div className="home-conteiner-title">
-                <h2>Series</h2>
-                <Link to="/ver-mas/cartelera" style={{ textDecoration: 'none' }}><p>Ver todas</p></Link>
+                <h2 className="series1">SERIES</h2>
+                <Link to="/ver-mas/cartelera" style={{ textDecoration: 'none' }}><p className="ver1">VER TODAS</p></Link>
             </div>
             <div className="home-conteiner-peliculas-en-cartelera">
                 {this.state.series_populares.map((pelicula) => (

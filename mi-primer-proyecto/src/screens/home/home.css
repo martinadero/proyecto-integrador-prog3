@@ -15,4 +15,19 @@ home-conteiner-title{
 
 .ver{
     color: black;
+    margin-left: 1cm;
+}
+
+.ver1{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-left: 1cm;
+}
+
+.series1{
+    margin-left: 1cm;
+}
+
+.pe{
+    margin-left: 1cm;
 }
