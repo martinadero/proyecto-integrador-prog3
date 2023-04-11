@@ -5,40 +5,35 @@ class Detalle extends Component{
         super(props);
         this.state = {
             props : props,
-            loader: true
-          
-
+            loader: true,
+            detalle: {}
         }
     }
 
-    url = 'https://api.themoviedb.org/3/movie/'
+    
     url2 = this.props.match.params.id
     url3 = '?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1'
 
     componentDidMount(){
-        fetch(this.url + this.url2 + this.url3)
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US`) 
         .then(response => response.json())
         .then(data => {
-            let objeto_pelicula = {}
-            objeto_pelicula.original_title = data.original_title
-            objeto_pelicula.vote_average = data.vote_average
-            objeto_pelicula.release_date = data.release_date
-            objeto_pelicula.overview = data.overview
-            objeto_pelicula.poster_path = `https://image.tmdb.org/t/p/original/${data.poster_path}`
-            
-             console.log(this.state.pelicula);
-        })
+            console.log(data)
+            this.setState({
+                detalle: data
+            })
+    })
         .catch(error => console.log(error));
     }
     render() {
+        console.log(this.state.detalle.poster_path)
         return (
             <div className='detalle-pelicula'>
-                <img className='imagenes' src={this.state.pelicula.poster_path} alt={""} />
-                <h1>{this.state.pelicula.original_title}</h1>
-                <h1>{this.state.pelicula.vote_average}</h1>
-                <h1>{this.state.pelicula.release_date}</h1>
-                <h1>{this.state.pelicula.overview}</h1>
-               
+         <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.state$.detalle$.poster_path}`}  /> 
+                <h1>{this.state.detalle.original_title}</h1>
+                <h1>{this.state.detalle.vote_average}</h1>
+                <h1>{this.state.detalle.release_date}</h1>
+        <h1>{this.state.detalle.overview}</h1> 
             </div>
         )
     }

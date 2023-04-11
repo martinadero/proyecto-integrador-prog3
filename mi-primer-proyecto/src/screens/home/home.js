@@ -3,6 +3,7 @@ import Tarjeta from "../../Components/tarjeta/tarjeta";
 import Header from "../../Components/header/header";
 import { Link } from "react-router-dom";
 import "./home.css";
+import SerieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
 
 
 class Home extends Component {
@@ -72,7 +73,7 @@ class Home extends Component {
             </div>
             <div className="home-conteiner-peliculas-en-cartelera">
                 {this.state.series_populares.map((serie) => (
-                    <Tarjeta data={serie} key={serie.id} />
+                    <SerieTarjeta data={serie} key={serie.id} />
                 ))}
             </div>
         </div>

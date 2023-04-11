@@ -29,3 +29,10 @@
     font-weight: 300;
 }
 
+.Mostrar{
+    display: block;
+}
+
+.Ocultar{
+    display: none;
+}

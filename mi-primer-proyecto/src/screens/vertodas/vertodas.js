@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Tarjeta from "../../Components/tarjeta/tarjeta";
 import './vertodas.css'
+import SerieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
 
 class verTodas extends Component {
   constructor(props) {
@@ -40,7 +41,8 @@ cargar_mas_peliculas(){
       .then((response) => response.json())
       .then((data) => {
         this.setState({
-          peliculas_populares: this.state.peliculas_populares.concat(data.results),
+          peliculas_populares: this.state.peliculas_populares.concat(data.results), 
+          // ponemos this.state y no data.results para que no se borren las peliculas de antes, el elemento es un estado. pelicuals populares es un estado, si no poemos this.state no va a sabner de qu eetsamos hablando. //
           loader: false,
           page:this.state.page+1  
         });
@@ -66,8 +68,6 @@ cargar_mas_series(){
 }
 
 
-
-
   render() {
     
     return(
@@ -91,7 +91,7 @@ cargar_mas_series(){
                     <div className="home-conteiner-peliculas-en-cartelera">
                         {/* map peliculas_en_cartelera */}
                         {this.state.series_populares.map((serie) => (
-                            <Tarjeta data={serie} key={serie.id} />
+                            <SerieTarjeta data={serie} key={serie.id} />
 
                         ))}
                         <button className="X" onClick={() => this.cargar_mas_series()}>Ver más</button>

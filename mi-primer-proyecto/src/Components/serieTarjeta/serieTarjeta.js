@@ -1,23 +1,46 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import './serieTarjeta.css';
 
-class serieTarjeta extends Component {
-    constructor(props){
+class SerieTarjeta extends Component {
+    constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            verMas: false, 
+            textoVerMas: 'Ver Más'
+        };
     }
-    render(){
+    verMas(){
+        if(this.state.verMas){
+            this.setState({
+                verMas: false,
+                textoVerMas: 'Ver más'
+            })
+        } else {
+            this.setState({
+                verMas: true,
+                textoVerMas: 'Ver menos'
+            })            
+        }
+    }
+    render() {
         console.log(this.props);
         return (
                 <div className='tarjetas'>
-                    <h3 className='textotarjeta'>{this.props.data.overview}</h3>
-                    <h3 className='textotarjeta'>{this.props.data.name}</h3>
+                    <h3 className='textotarjeta'>{this.props.data.original_name}</h3>
+                    <h3 className='textotarjeta'>{this.props.data.vote_average}</h3>
                     <h3 className='textotarjeta'>{this.props.data.first_air_date}</h3>
-                    <img className='imagenes' src={`poster_path: "/64xJnzk6z6Oj6dKha2h4JxgDy6x.jpg"}`} alt={this.props.data.poster_path} />
+    
+                    < Link className='t1' to={`/detallePelicula/id/${this.props.data.id}`} >
+                    <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.props.data.poster_path}`} alt={this.props.data.poster_path} />
+                    </Link>
+                    <h3 className= {`${this.state.verMas?'Mostrar':'Ocultar'}`}>{this.props.data.overview}</h3>
+                    <button className="X" onClick={() => this.verMas()}>{this.state.textoVerMas}</button>
                 </div>
+       
         )
     }
+
 }
 
-
-export default serieTarjeta
+export default SerieTarjeta;
