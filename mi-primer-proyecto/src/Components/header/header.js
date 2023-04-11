@@ -7,8 +7,8 @@ function Header(props){
 
     return(
         <nav className='navbar'>
-            <div className='homelogo'>
-                <Link to='/'><img className='logo' src='./img/logo.png' alt='' /></Link>
+            <div >
+                <Link className='homelogo' to='/'><img className='logo' src='./img/logo.png' alt='' /></Link>
             </div>
             <div className='search'>
                 <form className='search-form'>
@@ -17,8 +17,9 @@ function Header(props){
                 </form>
             </div>
             <div className="headerlist">
-                <Link to='/' style={{ textDecoration: 'none' }}><p>Home</p></Link>
-                <Link to='/favoritos' style={{ textDecoration: 'none' }}><p>Favoritos</p></Link>
+                <Link className='textoheader' to='/' style={{ textDecoration: 'none' }}><p>HOME</p></Link>
+                <Link className='textoheader' to='/favoritos' style={{ textDecoration: 'none' }}><p>FAVORITOS</p></Link>
+                <Link className='textoheader' to='/vertodas' style={{ textDecoration: 'none' }}><p>VER TODAS</p></Link>
             </div>
         </nav>
     )

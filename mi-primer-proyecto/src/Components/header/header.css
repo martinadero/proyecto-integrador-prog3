@@ -5,10 +5,15 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: radial-gradient(circle, #93684c, #200a2b);
+  background: radial-gradient(circle, #90694f, #2a1236);
+}
+
+.homelogo {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  margin: 1vh 1.5vw;
-    padding: 0 1vw;
+  margin-left: 1cm;
+  
 }
   
   .loginregister {
@@ -22,9 +27,10 @@
   }
   
   .logo {
-    width: 30%;
+    width: 40%;
     margin: 10px 0;
     filter: invert(100%)
+    
   }
 
 
@@ -58,11 +64,7 @@
   text-decoration: none;
 }
 
-.homelogo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 
 .search-form {
   display: flex;
@@ -93,3 +95,9 @@
 
 
   
+
+.textoheader{
+  color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-right: 1cm;
+}
