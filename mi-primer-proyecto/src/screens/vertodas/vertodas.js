@@ -7,8 +7,9 @@ class verTodas extends Component {
     super(props);
     this.state = {
       peliculas_populares: [],
-      peliculas_en_cartelera: [],
+      series_populares: [],
       loader: true,
+      page:2
     };
   }
 
@@ -23,18 +24,52 @@ class verTodas extends Component {
       })
       .catch((error) => console.log(error));
 
-    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1")
+      fetch("https://api.themoviedb.org/3/tv/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") 
       .then((response) => response.json())
       .then((data) => {
+        
         this.setState({
-          peliculas_en_cartelera: data.results,
+          series_populares:data.results,
           loader: false,
         });
       })
       .catch((error) => console.log(error));
   }
+cargar_mas_peliculas(){
+  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=${this.state.page}`) //CAMBIAR ESTE LINK//
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          peliculas_populares: this.state.peliculas_populares.concat(data.results),
+          loader: false,
+          page:this.state.page+1  
+        });
+      })
+      .catch((error) => console.log(error));
+
+
+}
+
+cargar_mas_series(){
+  fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=${this.state.page}`) //CAMBIAR ESTE LINK//
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          series_populares: this.state.series_populares.concat(data.results),
+          loader: false,
+          page:this.state.page+1  
+        });
+      })
+      .catch((error) => console.log(error));
+
+
+}
+
+
+
 
   render() {
+    
     return(
         <div>
             {
@@ -46,15 +81,20 @@ class verTodas extends Component {
                         {this.state.peliculas_populares.map((pelicula) => (
                             <Tarjeta data={pelicula} key={pelicula.id} />
                         ))}
+      <button className="X" onClick={() => this.cargar_mas_peliculas()}>Ver más</button>
+
+
                     </div>
                 </>:
                 <>
-                    <h1>Peliculas en Cartelera</h1>
+                    <h1>Series populares</h1>
                     <div className="home-conteiner-peliculas-en-cartelera">
                         {/* map peliculas_en_cartelera */}
-                        {this.state.peliculas_en_cartelera.map((pelicula) => (
-                            <Tarjeta data={pelicula} key={pelicula.id} />
+                        {this.state.series_populares.map((serie) => (
+                            <Tarjeta data={serie} key={serie.id} />
+
                         ))}
+                        <button className="X" onClick={() => this.cargar_mas_series()}>Ver más</button>
                     </div>
                 </>
             }

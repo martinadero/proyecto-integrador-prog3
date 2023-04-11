@@ -3,7 +3,7 @@ import Tarjeta from "../../Components/tarjeta/tarjeta";
 import Header from "../../Components/header/header";
 import { Link } from "react-router-dom";
 import "./home.css";
-import serieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
+
 
 class Home extends Component {
   constructor(props) {
@@ -35,9 +35,12 @@ class Home extends Component {
       fetch("https://api.themoviedb.org/3/tv/popular?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1") 
       .then((response) => response.json())
       .then((data) => {
-        
+        let lista_peliculas_populares = []
+        for (let i = 0; i < 4; i++) {
+            lista_peliculas_populares.push(data.results[i])
+        } 
         this.setState({
-          series_populares: data.results,
+          series_populares: lista_peliculas_populares,
           loader: false,
         });
       })
@@ -47,9 +50,7 @@ class Home extends Component {
     console.log("esta funcionando");
   }
   
-filtrar() {
-  console.log("esta funcionando");
-  }
+
  render() {
     return (
       <>
@@ -67,11 +68,11 @@ filtrar() {
             </div>
             <div className="home-conteiner-title">
                 <h2 className="series1">SERIES</h2>
-                <Link to="/ver-mas/cartelera" style={{ textDecoration: 'none' }}><p className="ver1">VER TODAS</p></Link>
+                <Link to="/ver-mas/series_populares" style={{ textDecoration: 'none' }}><p className="ver1">VER TODAS</p></Link>
             </div>
             <div className="home-conteiner-peliculas-en-cartelera">
-                {this.state.series_populares.map((pelicula) => (
-                    <Tarjeta data={pelicula} key={pelicula.id} />
+                {this.state.series_populares.map((serie) => (
+                    <Tarjeta data={serie} key={serie.id} />
                 ))}
             </div>
         </div>
