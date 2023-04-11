@@ -54,11 +54,11 @@ filtrar() {
     return (
       <>
         <Header />
-        <h1 className="home">Pagina del home</h1>
+        <h1 className="home">PAGINA HOME</h1>
         <div className="home-conteiner">
             <div className="home-conteiner-title">
-                <h2>Peliculas </h2>
-                <Link to="/ver-mas/populares" style={{ textDecoration: 'none' }}><p>Ver todas</p></Link>
+                <h2 className="home-conteiner-title"> PELICULAS </h2>
+                <Link to="/ver-mas/populares" style={{ textDecoration: 'none' }}><p className="ver">VER TODAS</p></Link>
             </div>
             <div className="home-conteiner-peliculas-populares">
                 {this.state.peliculas_populares.map((pelicula) => (
