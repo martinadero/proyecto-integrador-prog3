@@ -57,6 +57,8 @@ class Home extends Component {
       <>
         <Header />
         <h1 className="home">PAGINA HOME</h1>
+        {this.state.loader?
+                  <h3>Cargando...</h3>:
         <div className="home-conteiner">
             <div className="home-conteiner-title">
                 <h2 className="pe"> PELICULAS </h2>
@@ -76,7 +78,7 @@ class Home extends Component {
                     <SerieTarjeta data={serie} key={serie.id} />
                 ))}
             </div>
-        </div>
+        </div> }
       </>
     );
   }

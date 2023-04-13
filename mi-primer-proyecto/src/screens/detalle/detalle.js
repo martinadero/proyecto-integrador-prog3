@@ -29,7 +29,7 @@ class Detalle extends Component{
         console.log(this.state.detalle.poster_path)
         return (
             this.state.detalle.length === 0 ?
-            <h3>Cargano...</h3>:
+            <h3>Cargando...</h3>:
             <div className='detalle-pelicula'>
          <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.state.detalle.poster_path}`}  /> 
                 <h1>{this.state.detalle.original_title}</h1>
