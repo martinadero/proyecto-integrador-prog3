@@ -41,6 +41,7 @@ class Tarjeta extends Component {
         if(this.state.favorito){
             let sacarFav = favoritos.indexOf(id);
             favoritos.splice(sacarFav, 1);
+            this.props.actualizar(this.props.data.id)
      this.setState({
                 favorito: false,
                 textoFavorito: 'Agregar a favoritos'

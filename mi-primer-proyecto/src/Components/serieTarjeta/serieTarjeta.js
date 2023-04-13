@@ -41,6 +41,7 @@ class SerieTarjeta extends Component {
         if(this.state.favorito){
             let sacarFav = favoritos.indexOf(id);
             favoritos.splice(sacarFav, 1);
+            this.props.actualizar(this.props.data.id)
      this.setState({
                 favorito: false,
                 textoFavorito: 'Agregar a favoritos'
@@ -79,7 +80,7 @@ class SerieTarjeta extends Component {
                     <h3 className='textotarjeta'>{this.props.data.vote_average}</h3>
                     <h3 className='textotarjeta'>{this.props.data.first_air_date}</h3>
     
-                    < Link className='t1' to={`/detallePelicula/id/${this.props.data.id}`} >
+                    < Link className='t1' to={`/detalleSerie/id/${this.props.data.id}`} >
                     <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.props.data.poster_path}`} alt={this.props.data.poster_path} />
                     </Link>
                     <h3 className= {`${this.state.verMas?'Mostrar':'Ocultar'}`}>{this.props.data.overview}</h3>

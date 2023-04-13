@@ -11,7 +11,7 @@ class Favoritos extends Component {
         this.state = {
            peliculas_favoritas: [],
            series_favoritas:[],
-            loader: true
+            loader: false
         
         };
     };
@@ -19,8 +19,14 @@ class Favoritos extends Component {
            
             let recuperoStoragePelicula = localStorage.getItem('favoritos');
             let recuperoStorageSerie = localStorage.getItem('favoritosSerie')
+            console.log(recuperoStoragePelicula)
     
-            if(recuperoStoragePelicula !== null){ 
+            if(recuperoStoragePelicula !== []){ 
+                this.setState({
+                   
+                    loader:false
+                 })
+
                 let peliculasFavoritas =  []
                 let favoritosToArray = JSON.parse(recuperoStoragePelicula);
                 favoritosToArray.forEach(pelicula => {
@@ -41,43 +47,50 @@ class Favoritos extends Component {
                 })
                 console.log(peliculasFavoritas)
                
-            }else{
+            }
+
+            if(recuperoStorageSerie !== []){ 
                 this.setState({
                    
                     loader:false
                  })
 
-            }
-
-            if(recuperoStorageSerie !== null){ 
                 let seriesFavoritas =[]
+                console.log(recuperoStorageSerie)
                 
                 let favoritosToArray = JSON.parse(recuperoStorageSerie);
+                console.log(favoritosToArray)
                 favoritosToArray.forEach(serie => {
-                    fetch(`https://api.themoviedb.org/3/movie/${serie}?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US`) 
+                    fetch(`https://api.themoviedb.org/3/tv/${serie}?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US`) 
                     .then(response => response.json())
                     .then(data => {
                         console.log(data)
-                        seriesFavoritas=seriesFavoritas.push(data)
+                        seriesFavoritas=seriesFavoritas.concat(data)
                        
                     })
-                    
+                    .then(() => {
+                        this.setState({
+                            series_favoritas: seriesFavoritas,
+                            loader:false
+                         })
+                    })
                 })
-                this.setState({
-                    series_favoritas: seriesFavoritas,
-                    loader:false
-                 })
-            }else{
-                this.setState({
-                   
-                    loader:false
-                 })
-
             }
+        }
 
-            
+        actualizarpelicula(id){
+        let filtrarpelicula = this.state.peliculas_favoritas.filter(filtrado => filtrado.id!=id)
+        this.setState({
+            peliculas_favoritas: filtrarpelicula,
+         })
         }
        
+        actualizarserie(id){
+            let filtrarserie = this.state.series_favoritas.filter(filtrado => filtrado.id!=id)
+            this.setState({
+                series_favoritas: filtrarserie,
+             })
+            }
      render() {
          console.log(this.state.peliculas_favoritas)
         return (
@@ -91,21 +104,28 @@ class Favoritos extends Component {
                 <h2 className="pe"> PELICULAS FAVORITAS </h2>
                 
             </div>
-            <div className="home-conteiner-peliculas-populares">
-                {this.state.peliculas_favoritas.map((pelicula) => (
-                    <Tarjeta data={pelicula} key={pelicula.id} />
-                ))}
-            </div>
+            {this.state.peliculas_favoritas.length==0?
+            <h2> No tiene peliculas favoritas, empezá a agregarlas</h2>: <div className="home-conteiner-peliculas-populares">
+            {this.state.peliculas_favoritas.map((pelicula) => (
+                <Tarjeta data={pelicula} key={pelicula.id} actualizar={(id) => this.actualizarpelicula(id)}/>
+            ))}
+        </div>}
+            
             <div className="home-conteiner-title">
                 <h2 className="series1">SERIES FAVORITAS</h2>
                
             </div>
+
+            {this.state.series_favoritas.length==0?
+            <h2> No tiene series favoritas, empezá a agregarlas</h2>:
             <div className="home-conteiner-peliculas-en-cartelera">
                 {this.state.series_favoritas.map((serie) => (
-                    <SerieTarjeta data={serie} key={serie.id} />
+                    <SerieTarjeta data={serie} key={serie.id}actualizar={(id) => this.actualizarserie(id)} />
                 ))}
             </div>
-        </div> }
+     
+            }
+               </div> } 
      
           </>
         );
