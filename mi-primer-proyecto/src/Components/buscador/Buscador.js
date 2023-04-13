@@ -31,4 +31,11 @@ class Buscador extends Component {
         )
     }
 }
+
+class IconName extends Component {
+    render() {
+      return <FaHeart />  
+    }
+  }
+  
 export default Buscador
