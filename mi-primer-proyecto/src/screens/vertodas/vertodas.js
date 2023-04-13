@@ -10,7 +10,12 @@ class verTodas extends Component {
       peliculas_populares: [],
       series_populares: [],
       loader: true,
-      page:2
+      page:2,
+      mensaje: '',
+      valor: '',
+     peliculasIniciales: [],
+verMasHabilitado:true,
+
     };
   }
 
@@ -21,6 +26,7 @@ class verTodas extends Component {
         this.setState({
           peliculas_populares: data.results,
           loader: false,
+          peliculasIniciales:data.results,
         });
       })
       .catch((error) => console.log(error));
@@ -44,7 +50,8 @@ cargar_mas_peliculas(){
           peliculas_populares: this.state.peliculas_populares.concat(data.results), 
           // ponemos this.state y no data.results para que no se borren las peliculas de antes, el elemento es un estado. pelicuals populares es un estado, si no poemos this.state no va a sabner de qu eetsamos hablando. //
           loader: false,
-          page:this.state.page+1  
+          page:this.state.page+1,
+          peliculasIniciales: this.state.peliculasIniciales.concat(data.results),  
         });
       })
       .catch((error) => console.log(error));
@@ -67,21 +74,50 @@ cargar_mas_series(){
 
 }
 
+evitarSubmit(event) {
+  event.preventDefault();
+}
+
+filtrar(event) {
+
+  this.setState({
+      valor: event.target.value,
+      verMasHabilitado:false
+      
+  },() => console.log(event.target.value))
+
+  let peliculasFiltradas = this.state.peliculasIniciales.filter(pelicula => pelicula.title.toLowerCase().includes(event.target.value.toLowerCase()));
+  this.setState({
+      peliculas_populares: peliculasFiltradas,
+  })
+
+  if(event.target.value ==''){
+      this.setState({
+          verMasHabilitado: true
+          
+      })
+  }
+}
 
   render() {
     
+
     return(
         <div>
             {
                 this.props.match.params.id === 'populares' ?
                 <>
+                <form onSubmit={(event) => this.evitarSubmit(event)}>
+                        <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
+                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
+                    </form>
                     <h1>Peliculas Populares</h1>
                     <div className="home-conteiner-peliculas-populares">
                         {/* map peliculas_populares */}
                         {this.state.peliculas_populares.map((pelicula) => (
                             <Tarjeta data={pelicula} key={pelicula.id} />
                         ))}
-      <button className="X" onClick={() => this.cargar_mas_peliculas()}>Ver más</button>
+   { this.state.verMasHabilitado?  <button className="X" onClick={() => this.cargar_mas_peliculas()}>Ver más</button>:<></>}
 
 
                     </div>

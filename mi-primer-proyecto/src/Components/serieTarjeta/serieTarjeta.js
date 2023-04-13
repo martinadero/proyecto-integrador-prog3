@@ -73,7 +73,7 @@ class SerieTarjeta extends Component {
         }
     }
     render() {
-        console.log(this.props);
+        
         return (
                 <div className='tarjetas'>
                     <h3 className='textotarjeta'>{this.props.data.original_name}</h3>

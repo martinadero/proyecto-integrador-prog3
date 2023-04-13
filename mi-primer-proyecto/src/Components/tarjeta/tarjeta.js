@@ -73,7 +73,7 @@ class Tarjeta extends Component {
         }
     }
     render() {
-        console.log(this.props);
+     
         return (
                 <div className='tarjetas'>
                     <h3 className='textotarjeta'>{this.props.data.title}</h3>
