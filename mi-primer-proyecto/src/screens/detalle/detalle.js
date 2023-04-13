@@ -6,24 +6,81 @@ class Detalle extends Component{
         this.state = {
             props : props,
             loader: true,
-            detalle: {}
+            detalle: {},
+            favorito:false,
+            textoFavorito:'Agregar a favoritos',
+
         }
     }
 
     
-    url2 = this.props.match.params.id
-    url3 = '?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US&page=1'
+   
 
     componentDidMount(){
+        let id 
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=a0959ac201dc94da76d17af9fee2bfd2&language=en-US`) 
         .then(response => response.json())
         .then(data => {
             console.log(data)
+            id = data.id
             this.setState({
                 detalle: data
             })
     })
+    .then(()=>{
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos');
+
+        if(recuperoStorage !== null){
+            let favoritosToArray = JSON.parse(recuperoStorage);
+            favoritos = favoritosToArray;
+        };
+        console.log(favoritos)
+        console.log(id)
+
+        if(favoritos.includes(id)){
+            this.setState({
+                favorito: true,
+                textoFavorito:'Quitar de favoritos',
+
+            });
+        } 
+
+    })
         .catch(error => console.log(error));
+        
+    }
+   
+
+    modificarFavoritos(id){
+        let favoritos = [];
+        let recuperoStorage = localStorage.getItem('favoritos');
+
+        if(recuperoStorage !== null){
+            favoritos = JSON.parse(recuperoStorage);
+        };
+        
+        if(this.state.favorito){
+            let sacarFav = favoritos.indexOf(id);
+            favoritos.splice(sacarFav, 1);
+
+            this.setState({
+                favorito: false,
+                textoFavorito: 'Agregar a favoritos'
+            })
+        } else { 
+             favoritos.push(id);
+            this.setState({
+                 favorito: true,
+                textoFavorito:'Quitar de favoritos',
+            })            
+        }
+
+         let favoritosToString = JSON.stringify(favoritos);
+        localStorage.setItem('favoritos', favoritosToString);
+
+        console.log(localStorage);
+       
     }
     render() {
         console.log(this.state.detalle.poster_path)
@@ -36,6 +93,7 @@ class Detalle extends Component{
                 <h1>{this.state.detalle.vote_average}</h1>
                 <h1>{this.state.detalle.release_date}</h1>
         <h1>{this.state.detalle.overview}</h1> 
+        <button className="X" onClick={() => this.modificarFavoritos(this.state.detalle.id)}>{this.state.textoFavorito}</button>
             </div>
         )
     }

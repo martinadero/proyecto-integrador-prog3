@@ -21,7 +21,7 @@ class Favoritos extends Component {
             let recuperoStorageSerie = localStorage.getItem('favoritosSerie')
             console.log(recuperoStoragePelicula)
     
-            if(recuperoStoragePelicula !== []){ 
+            if(recuperoStoragePelicula !== null){ 
                 this.setState({
                    
                     loader:false
@@ -49,7 +49,7 @@ class Favoritos extends Component {
                
             }
 
-            if(recuperoStorageSerie !== []){ 
+            if(recuperoStorageSerie !== null){ 
                 this.setState({
                    
                     loader:false
@@ -131,6 +131,7 @@ class Favoritos extends Component {
         );
       }
     }
+
 
 
 
