@@ -8,6 +8,11 @@ import { Route, Switch } from "react-router-dom";
 import Favoritos from "./screens/Favoritos/favoritos";
 import Detalleserie from "./screens/detalleserie/detalleserie";
 import NotFound from "./screens/notfound/notfound";
+<<<<<<< HEAD
+=======
+import { IconName } from "react-icons/fa"; //comentario//
+import { FaHeart } from "react-icons/fa";  //comentario//
+>>>>>>> 5af0297108524987335302a67056c231d2d1a259
 
 function App() {
   return (
