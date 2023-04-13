@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from '../../Components/header/header';
 import Tarjeta from "../../Components/tarjeta/tarjeta";
 import './vertodas.css'
 import SerieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
@@ -109,6 +110,7 @@ filtrar(event) {
 
                 this.props.match.params.id === 'populares' ?
                 <>
+                 <Header />
                 
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
                         <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
