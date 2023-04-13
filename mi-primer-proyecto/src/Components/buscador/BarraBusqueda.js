@@ -4,7 +4,7 @@ const  BarraBusqueda = () => {
 
       <form className="buscador1" >
         <input   type="search" name="buscador" button= "" />
-        <button type="submit">Buscar <i className="FaHeart"></i></button>
+        <button type="submit">Buscar </button>
       
 
         

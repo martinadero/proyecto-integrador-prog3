@@ -8,7 +8,6 @@ import { Route, Switch } from "react-router-dom";
 import Favoritos from "./screens/Favoritos/favoritos";
 import Detalleserie from "./screens/detalleserie/detalleserie";
 import NotFound from "./screens/notfound/notfound";
-import { FaHeart } from "react-icons/fa";
 
 function App() {
   return (

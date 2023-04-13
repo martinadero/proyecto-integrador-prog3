@@ -3,6 +3,7 @@ import Tarjeta from "../../Components/tarjeta/tarjeta";
 import './vertodas.css'
 import SerieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
 
+
 class verTodas extends Component {
   constructor(props) {
     super(props);
@@ -105,8 +106,10 @@ filtrar(event) {
     return(
         <div>
             {
+
                 this.props.match.params.id === 'populares' ?
                 <>
+                
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
                         <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
                         <button type='submit'><i className="fa-solid fa-filter"></i></button>

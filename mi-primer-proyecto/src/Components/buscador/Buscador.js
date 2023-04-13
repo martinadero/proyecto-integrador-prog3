@@ -2,7 +2,7 @@ import { Component } from "react"
 import BarraBusqueda from "./BarraBusqueda"
 import ResultadosBusqueda from "./ResultadosBusqueda"
 import { API_ENDPOINTS } from "../../constants"
-import { FaHeart } from "react-icons/fa";
+
 
 class Buscador extends Component {
     constructor(props) {
