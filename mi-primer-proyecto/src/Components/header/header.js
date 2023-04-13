@@ -3,7 +3,7 @@ import './header.css';
 
 import { Link } from 'react-router-dom';
 
-function Header(props){
+function Header(_props){
 
     return(
         <nav className='navbar'>
@@ -16,6 +16,7 @@ function Header(props){
             <div className="headerlist">
                 <Link className='textoheader' to='/' style={{ textDecoration: 'none' }}><p>HOME</p></Link>
                 <Link className='textoheader' to='/favoritos' style={{ textDecoration: 'none' }}><p>FAVORITOS</p></Link>
+                <Link className='textoheader' to='./vertodas' style={{ textDecoration: 'none' }}><p>VER TODAS</p></Link>
             </div>
         </nav>
     )
