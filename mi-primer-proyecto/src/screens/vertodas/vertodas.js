@@ -16,7 +16,7 @@ class verTodas extends Component {
       valor: '',
      peliculasIniciales: [],
 verMasHabilitado:true,
-
+     seriesIniciales:[],
     };
   }
 
@@ -39,6 +39,7 @@ verMasHabilitado:true,
         this.setState({
           series_populares:data.results,
           loader: false,
+          seriesIniciales: data.results,
         });
       })
       .catch((error) => console.log(error));
@@ -66,6 +67,7 @@ cargar_mas_series(){
       .then((data) => {
         this.setState({
           series_populares: this.state.series_populares.concat(data.results),
+          seriesIniciales: this.state.seriesIniciales.concat(data.results),
           loader: false,
           page:this.state.page+1  
         });
@@ -100,7 +102,26 @@ filtrar(event) {
   }
   
 }
+filtrarSeries(event) {
 
+  this.setState({
+      valor: event.target.value,
+      verMasHabilitado:false
+      
+  },() => console.log(event.target.value))
+
+  let seriesFiltradas = this.state.seriesIniciales.filter(serie=> serie.title.toLowerCase().includes(event.target.value.toLowerCase()));
+  this.setState({
+      series_populares: seriesFiltradas ,
+  })
+
+  if(event.target.value ==''){
+      this.setState({
+          verMasHabilitado: true
+          
+      })
+  }
+}
   render() {
     
 
@@ -129,7 +150,7 @@ filtrar(event) {
                 </>:
                 <>
 <form onSubmit={(event) => this.evitarSubmit(event)}>
-                        <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
+                        <input type="text" onChange={(event) => this.filtrarSeries(event)} value={this.state.valor} />
                         <button type='submit'><i className="fa-solid fa-filter"></i></button>
                     </form>
                     <h1>Series populares</h1>
@@ -139,7 +160,7 @@ filtrar(event) {
                             <SerieTarjeta data={serie} key={serie.id} />
 
                         ))}
-                        <button className="X" onClick={() => this.cargar_mas_series()}>Ver más</button>
+                         { this.state.verMasHabilitado?  <button className="X" onClick={() => this.cargar_mas_series()}>Ver más</button>:<></>}
                     </div>
                 </>
             }
