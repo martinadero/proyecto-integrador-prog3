@@ -89,6 +89,7 @@ class Detalleserie extends Component{
                 <h1>{this.state.detalle.original_name}</h1>
                 <h1>{this.state.detalle.vote_average}</h1>
                 <h1>{this.state.detalle.first_air_date}</h1>
+                <p>{this.state.detalle.overview} </p>
         <h1>{this.state.detalle.overview}</h1> 
         <button className="X" onClick={() => this.modificarFavoritos(this.state.detalle.id)}>{this.state.textoFavorito}</button>
             </div>

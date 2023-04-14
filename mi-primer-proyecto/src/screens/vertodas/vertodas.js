@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from '../../Components/header/header';
 import Tarjeta from "../../Components/tarjeta/tarjeta";
 import './vertodas.css'
 import SerieTarjeta from "../../Components/serieTarjeta/serieTarjeta";
