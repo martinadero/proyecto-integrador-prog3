@@ -110,7 +110,7 @@ filtrarSeries(event) {
       
   },() => console.log(event.target.value))
 
-  let seriesFiltradas = this.state.seriesIniciales.filter(serie=> serie.title.toLowerCase().includes(event.target.value.toLowerCase()));
+  let seriesFiltradas = this.state.seriesIniciales.filter(serie=> serie.original_name.toLowerCase().includes(event.target.value.toLowerCase()));
   this.setState({
       series_populares: seriesFiltradas ,
   })
@@ -134,8 +134,8 @@ filtrarSeries(event) {
                 
                 
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
-                        <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
-                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
+                        <input className="search-form_input" type="text" onChange={(event) => this.filtrar(event)} placeholder="Filtra tu pelicula" value={this.state.valor} />
+                        
                     </form>
                     <h1>Peliculas Populares</h1>
                     <div className="home-conteiner-peliculas-populares">
@@ -150,8 +150,8 @@ filtrarSeries(event) {
                 </>:
                 <>
 <form onSubmit={(event) => this.evitarSubmit(event)}>
-                        <input type="text" onChange={(event) => this.filtrarSeries(event)} value={this.state.valor} />
-                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
+                        <input className="search-form_input" type="text" onChange={(event) => this.filtrarSeries(event)} placeholder="Filtra tu serie" value={this.state.valor} />
+                      
                     </form>
                     <h1>Series populares</h1>
                     <div className="home-conteiner-peliculas-en-cartelera">
