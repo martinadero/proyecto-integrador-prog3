@@ -95,7 +95,7 @@ class Favoritos extends Component {
          console.log(this.state.peliculas_favoritas)
         return (
           <>
-            <Header />
+            
             <h1 className="home">PAGINA FAVORITOS</h1>
             {this.state.loader?
                   <h3>Cargando...</h3>:

@@ -122,7 +122,7 @@ evitarSubmit(e){
   console.log(this.state.mensajePelicula);
     return (
       <>
-        <Header />
+        
        <h1 className="home">PAGINA HOME</h1>
        <form  onSubmit={(event)=>this.buscador(event)}>
                 <input type="text" name= "name" onChange={(e)=>this.evitarSubmit(e)} value={this.state.busqueda}  />

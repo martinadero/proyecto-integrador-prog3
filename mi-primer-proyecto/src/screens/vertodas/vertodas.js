@@ -110,7 +110,7 @@ filtrar(event) {
 
                 this.props.match.params.id === 'populares' ?
                 <>
-                 <Header />
+                
                 
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
                         <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />

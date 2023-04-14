@@ -94,6 +94,7 @@ class Detalle extends Component{
                 <h1> * {this.state.detalle.vote_average}</h1>
                 <h1> * RELEASE DATE:   {this.state.detalle.release_date}</h1>
         <h1> * SINTHESIS: {this.state.detalle.overview}</h1> 
+        
         <button className="X" onClick={() => this.modificarFavoritos(this.state.detalle.id)}>{this.state.textoFavorito}</button>
             </div>
         )
