@@ -98,6 +98,7 @@ filtrar(event) {
           
       })
   }
+  
 }
 
   render() {

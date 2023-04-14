@@ -85,6 +85,7 @@ class Tarjeta extends Component {
                     <h3 className= {`${this.state.verMas?'Mostrar':'Ocultar'}`}>{this.props.data.overview}</h3>
                     <button className="X" onClick={() => this.verMas()}>{this.state.textoVerMas}</button>
                     <button className="X" onClick={() => this.modificarFavoritos(this.props.data.id)}>{this.state.textoFavorito}</button>
+                   
                 </div>
        
         )
