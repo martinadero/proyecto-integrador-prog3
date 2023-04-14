@@ -77,8 +77,7 @@ class SerieTarjeta extends Component {
         return (
                 <div className='tarjetas'>
                     <h3 className='textotarjeta'>{this.props.data.original_name}</h3>
-                    <h3 className='textotarjeta'>{this.props.data.vote_average}</h3>
-                    <h3 className='textotarjeta'>{this.props.data.first_air_date}</h3>
+                  
     
                     < Link className='t1' to={`/detalleSerie/id/${this.props.data.id}`} >
                     <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.props.data.poster_path}`} alt={this.props.data.poster_path} />

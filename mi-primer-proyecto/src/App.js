@@ -8,11 +8,13 @@ import { Route, Switch } from "react-router-dom";
 import Favoritos from "./screens/Favoritos/favoritos";
 import Detalleserie from "./screens/detalleserie/detalleserie";
 import NotFound from "./screens/notfound/notfound";
+import Header from "./Components/header/header";
 
 
 function App() {
   return (
     <div className="App">
+      
       <Switch>
         
         <Route path="/" exact component={Home} />
