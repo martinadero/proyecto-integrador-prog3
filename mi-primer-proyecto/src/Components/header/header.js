@@ -13,10 +13,13 @@ function Header(_props){
             <div className='search'>
              
             </div>
-            <div className="headerlist">
+            <div >
+                <ul className='headerlist'>
                 <Link className='textoheader' to='/' style={{ textDecoration: 'none' }}><p>HOME</p></Link>
                 <Link className='textoheader' to='/favoritos' style={{ textDecoration: 'none' }}><p>FAVORITOS</p></Link>
-                <Link className='textoheader' to='/vertodas' style={{ textDecoration: 'none' }}><p>VER TODAS</p></Link>
+                <Link className='textoheader' to='/ver-mas/populares' style={{ textDecoration: 'none' }}><p>VER TODAS LAS PELICULAS</p></Link>
+                <Link className='textoheader' to='/ver-mas/series_populares' style={{ textDecoration: 'none' }}><p>VER TODAS LAS SERIES</p></Link>
+                </ul>
             </div>
         </nav>
     )
