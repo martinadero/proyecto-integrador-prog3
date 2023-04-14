@@ -127,6 +127,10 @@ filtrar(event) {
                     </div>
                 </>:
                 <>
+<form onSubmit={(event) => this.evitarSubmit(event)}>
+                        <input type="text" onChange={(event) => this.filtrar(event)} value={this.state.valor} />
+                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
+                    </form>
                     <h1>Series populares</h1>
                     <div className="home-conteiner-peliculas-en-cartelera">
                         {/* map peliculas_en_cartelera */}
