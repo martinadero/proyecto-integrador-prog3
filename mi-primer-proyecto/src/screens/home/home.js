@@ -124,7 +124,7 @@ evitarSubmit(e){
       <>
         
        <h1 className="home">PAGINA HOME</h1>
-       <form  onSubmit={(event)=>this.buscador(event)}>
+       <form className="buscador1"  onSubmit={(event)=>this.buscador(event)}>
                 <input className="search-form_input" type="text" name= "name" onChange={(e)=>this.evitarSubmit(e)} placeholder="Busca tu serie o pelicula" value={this.state.busqueda}  />
                 <button  type="submit" >Buscar </button>
             </form>

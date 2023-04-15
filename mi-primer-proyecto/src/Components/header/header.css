@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: radial-gradient(circle, #90694f, #2a1236);
+  background: radial-gradient(circle, #90694f, #783927cd);
 }
 
 .homelogo {

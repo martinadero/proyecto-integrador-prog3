@@ -10,6 +10,7 @@ class Detalle extends Component{
             detalle: {},
             favorito:false,
             textoFavorito:'Agregar a favoritos',
+            generos:[]
 
         }
     }
@@ -25,7 +26,9 @@ class Detalle extends Component{
             console.log(data)
             id = data.id
             this.setState({
-                detalle: data
+                detalle: data,
+                generos: data.genres,
+          
             })
     })
     .then(()=>{
@@ -93,6 +96,9 @@ class Detalle extends Component{
                 <h1>  * name:  {this.state.detalle.original_title}</h1>
                 <h1>  * vote average: {this.state.detalle.vote_average}</h1>
                 <h1>  * release date:  {this.state.detalle.release_date}</h1>
+                <ul className='generos'> Generos:{this.state.generos.map((genero, idx) => <li key={genero.name + idx}>{genero.name}</li>)}</ul>
+               
+                
     
                 
         <h1> * SINTHESIS: {this.state.detalle.overview}</h1> 

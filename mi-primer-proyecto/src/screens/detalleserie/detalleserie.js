@@ -9,6 +9,7 @@ class Detalleserie extends Component{
             detalle: {},
             favorito:false,
             textoFavorito:'Agregar a favoritos',
+            generos:[]
         }
     }
 
@@ -22,7 +23,8 @@ class Detalleserie extends Component{
              id = data.id
     
             this.setState({
-                detalle: data
+                detalle: data,
+                generos: data.genres,
             })
     })
         .then(()=>{
@@ -85,11 +87,11 @@ class Detalleserie extends Component{
             this.state.detalle.length === 0 ?
             <h3>Cargando...</h3>:
             <div className='detalle-pelicula'>
-         <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.state.detalle.poster_path}`}  /> 
-                <h1>{this.state.detalle.original_name}</h1>
-                <h1>{this.state.detalle.vote_average}</h1>
-                <h1>{this.state.detalle.first_air_date}</h1>
-                <p>{this.state.detalle.overview} </p>
+         <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.state.detalle.poster_path}`}  />  
+                <h1 className='detalle-peliculas'> *name: {this.state.detalle.original_name}</h1>
+                <h1 className='detalle-peliculas'> *vote average: {this.state.detalle.vote_average}</h1>
+                <h1 className='detalle-peliculas'> *date: {this.state.detalle.first_air_date}</h1>
+                <ul className='generos'> generos:{this.state.generos.map((genero, idx) => <li className='detalle5' key={genero.name + idx}>{genero.name}</li>)}</ul>
         <h1>{this.state.detalle.overview}</h1> 
         <button className="X" onClick={() => this.modificarFavoritos(this.state.detalle.id)}>{this.state.textoFavorito}</button>
             </div>
