@@ -90,9 +90,11 @@ class Detalle extends Component{
             <h3>Cargando...</h3>:
             <div className='detalle-pelicula'>
          <img className='imagenes' src={`https://image.tmdb.org/t/p/original/${this.state.detalle.poster_path}`}  /> 
-                <h1>   {this.state.detalle.original_title}</h1>
-                <h1> {this.state.detalle.vote_average}</h1>
-                <h1>    {this.state.detalle.release_date}</h1>
+                <h1>  * name:  {this.state.detalle.original_title}</h1>
+                <h1>  * vote average: {this.state.detalle.vote_average}</h1>
+                <h1>  * release date:  {this.state.detalle.release_date}</h1>
+    
+                
         <h1> * SINTHESIS: {this.state.detalle.overview}</h1> 
         
         <button className="X" onClick={() => this.modificarFavoritos(this.state.detalle.id)}>{this.state.textoFavorito}</button>
